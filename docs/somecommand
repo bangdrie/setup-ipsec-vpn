@@ -1,0 +1,9 @@
+adding some command for purpose with this script
+
+if [ "$PPP_IFACE" = "ppp0" ] ; then
+
+  /sbin/ip route add 192.168.5.0/24 dev ppp0
+fi
+
+
+adding in ppp0 up script
