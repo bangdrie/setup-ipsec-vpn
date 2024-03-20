@@ -5,5 +5,12 @@ if [ "$PPP_IFACE" = "ppp0" ] ; then
   /sbin/ip route add 192.168.5.0/24 dev ppp0
 fi
 
+if [ "$PPP_IFACE" = "$1" ] ; then
+
+  /sbin/ip route add 192.168.33.0/24 dev "$1"
+  /sbin/ip route add 192.168.143.0/24 dev "$1"
+  /sbin/ip route add 172.16.0.0/20 dev "$1"
+  /sbin/ip route add 192.168.100.0/24 dev "$1"
+fi
 
 adding in ppp0 up script
